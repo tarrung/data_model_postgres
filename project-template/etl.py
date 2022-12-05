@@ -6,6 +6,7 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    """Reads json file and ingest data into songs and artists table"""
     # open song file
     df = pd.read_json(filepath, lines = True)
 
@@ -19,6 +20,7 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+    """Reads json file and ingest data into time, users and songplays table"""
     # open log file
     df = pd.read_json(filepath, lines = True)
 
